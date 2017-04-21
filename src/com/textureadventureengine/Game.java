@@ -24,6 +24,12 @@ public class Game {
 			
 			System.out.println("Choose an exit: ");
 			int destination = reader.nextInt();
+			Exit attemptedDestination = currentRoom.getExits().get(destination - 1);
+		
+			if (attemptedDestination != null) {
+				currentRoom = attemptedDestination.getConnectedRoom();
+				System.out.println("Exiting...\r");
+			}
 		}
 	}
 }
