@@ -4,13 +4,13 @@ public class Exit {
 	protected String description;
 	protected Room connectedRoom;
 	
-	public Exit(String Description, Room room) {
+	public Exit(String description, Room room) {
 		setDescription(description);
 		setConnectedRoom(room);
 	}
 	
 	public String getDescription() {
-		return description;
+		return this.description;
 	}
 	
 	public void setDescription(String description) {

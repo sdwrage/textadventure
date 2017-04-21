@@ -20,10 +20,19 @@ public class Game {
 		while(gameRunning) {
 			System.out.print(currentRoom.getDescription());
 			
-			System.out.print("\n");
+			System.out.print("\r\r");
+			
+			System.out.println("Exits: ");
+			int exitCount = currentRoom.getExits().size();
+			
+			for(int i = 0; i < exitCount; i++) {
+				System.out.println((i + 1) +  ": " + currentRoom.getExits().get(i).getDescription() + "\r\r");
+			}
 			
 			System.out.println("Choose an exit: ");
+			
 			int destination = reader.nextInt();
+			
 			Exit attemptedDestination = currentRoom.getExits().get(destination - 1);
 		
 			if (attemptedDestination != null) {
