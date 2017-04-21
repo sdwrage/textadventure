@@ -1,4 +1,4 @@
-package com.java24hours;
+package com.textureadventureengine;
 
 public class Exit {
 	protected String description;

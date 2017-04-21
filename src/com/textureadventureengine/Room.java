@@ -1,11 +1,12 @@
-package com.java24hours;
+package com.textureadventureengine;
 
 import java.util.ArrayList;
-import com.java24hours.Exit;
+
+import com.textureadventureengine.Exit;
 
 public class Room {
 	protected String description;
-	protected ArrayList<Exit> exits;
+	protected ArrayList<Exit> exits = new ArrayList<>();
 	
 	public Room(String description, ArrayList<Exit> exits) {
 		setExits(exits);

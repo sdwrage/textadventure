@@ -1,7 +1,7 @@
-package com.java24hours;
+package com.textureadventureengine;
 
-import com.java24hours.Room;
-import com.java24hours.Exit;
+import com.textureadventureengine.Exit;
+import com.textureadventureengine.Room;
 
 public class Map {
 	public Room setupRooms()
