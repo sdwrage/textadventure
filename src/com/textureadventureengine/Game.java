@@ -20,16 +20,16 @@ public class Game {
 		while(gameRunning) {
 			System.out.print(currentRoom.getDescription());
 			
-			System.out.print("\r\r");
+			System.out.print("\n\n");
 			
-			System.out.println("Exits: ");
+			System.out.println("Exits:\n");
 			int exitCount = currentRoom.getExits().size();
 			
 			for(int i = 0; i < exitCount; i++) {
-				System.out.println((i + 1) +  ": " + currentRoom.getExits().get(i).getDescription() + "\r\r");
+				System.out.println((i + 1) +  ": " + currentRoom.getExits().get(i).getDescription() + "\n");
 			}
 			
-			System.out.println("Choose an exit: ");
+			System.out.print("\n Choose an exit: ");
 			
 			int destination = reader.nextInt();
 			
@@ -37,8 +37,14 @@ public class Game {
 		
 			if (attemptedDestination != null) {
 				currentRoom = attemptedDestination.getConnectedRoom();
-				System.out.println("Exiting...\r");
+				//System.out.println("Exiting...\n\n");
+				clearScreen();
 			}
 		}
 	}
+	
+	public static void clearScreen() {  
+	    System.out.print("\033[H\033[2J");  
+	    System.out.flush();  
+	   }  
 }
